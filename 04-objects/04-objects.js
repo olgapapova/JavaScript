@@ -1,11 +1,11 @@
 const person = {
-  name: 'Vladilen',
-  age: 29,
-  isYoutuber: true,
+  name: 'Olga',
+  age: 34,
+  isYoutuber: false,
   languages: ['ru', 'en'],
   address: {
-    city: 'Saint-Petersburg',
-    street: 'Nesvky',
+    city: 'Minsk',
+    street: 'Jakubowskogo',
   },
   'complex key': 'complex value',
   ['key_' + 21 * 2]: 'computed value',
