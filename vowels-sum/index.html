@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Vowels-sum</title>
+  </head>
+  <body>
+      <script>
+
+           let s=prompt('введите любую строку:');      
+
+           function vowels(str) {
+               let sch = 0;
+               let us={ а:1, у:1, о:1, ы:1, и:1, э:1, я:1, ю:1, ё:1, е:1, А:1, У:1, О:1, Ы:1, И:1, Э:1, Я:1, Ю:1, Ё:1, Е:1 };
+               for ( let i = 0; i < str.length; i++ ) {
+                   if ( str[i] in us )
+                       sch += 1
+               }
+               return sch;
+           }
+           console.log(vowels(s));
+
+      </script>
+  </body>
+</html>
