@@ -6,77 +6,12 @@
   </head>
   <body>
 
-    <input type = button value = 'ввод информации о напитке' onclick = 'enter()'>
-    <input type = button value = 'получение информации о напитке' onclick = 'info()'>
-    <input type = button value = 'удаление информации о напитке' onclick = 'del()'>
-    <input type = button value = 'перечень всех напитков' onclick = 'listGen()'>
+    <input type=button value='ввод информации о напитке' onclick='enter()'>
+    <input type=button value='получение информации о напитке' onclick='info()'>
+    <input type=button value='удаление информации о напитке' onclick='del()'>
+    <input type=button value='перечень всех напитков' onclick='listGen()'>
 
-    <script>
-
-    function HashStorageFunc(keyName,valueKey) {
-        var self = this;
-        self.key = keyName;
-        self.value = valueKey;
-        self.storage = {};
-
-        self.addValue = function() {self.storage[self.key] = self.value}
-        self.getValue = function() { 
-            var rez = "";
-            if (typeof self.storage[self.key] === 'object') {
-                for (let k in self.storage[self.key]) {
-                    rez += (k + ': ' + self.storage[self.key][k] + '\n');
-                }
-                return rez;
-                }
-            else
-                return self.storage[self.key];
-        }
-        self.deleteValue = function() {
-            if (self.key in self.storage) {
-                delete self.storage[self.key]; 
-                return true;
-                }
-             else
-                return false; 
-        }
-        self.getKeys = function() { 
-            let keyArr = [];
-            for (let keys in self.storage)
-                keyArr.push (keys);
-            return keyArr;
-        }
-    }
-
-    const drinkStorage = new HashStorageFunc();
-    
-    function enter() {
-        drinkStorage.key = prompt('Введите название напитка:');
-        let isAlcohol = confirm('Это алкогольный напиток? Если да нажмите "ОК", если нет "Отмена"');
-        let alcohol = (isAlcohol === true) ? 'да' : 'нет';
-        let recipe = prompt('Введите рецепт его приготовления:');
-        drinkStorage.value = {'алкогольный': alcohol, 'рецепт приготовления': recipe}
-        drinkStorage.addValue();
-    }
-
-    function info() {
-        drinkStorage.key = prompt('Введите название напитка:');
-        if (drinkStorage.key in drinkStorage.storage)
-            alert('напиток' + ' ' + drinkStorage.key + '\n' +
-            drinkStorage.getValue())
-        else
-            alert('Данного напитка нет в хранилище!');
-    }
-
-    function del() {
-        drinkStorage.key = prompt('Введите название напитка:');
-        drinkStorage.deleteValue() ? alert ('Напиток удалён') : alert ('Данного напитка нет в хранилище!');
-    }
-
-    function listGen() {
-        return alert(drinkStorage.getKeys());
-    }
-
-    </script>
+    <script src="app.js" defer></script>
 
   </body>
 </html>
