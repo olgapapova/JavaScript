@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Valid_form</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <style>
+
+    .Cont { line-height: 150% }
+    .ContF { margin-left: 180px }
+    .FormText { width: 40% }
+    .Lab { width: 180px; float: left }
+    .FormURL { width: 30% }
+    .FormNumber { width: 10% }
+    .FormE { width: 20% }
+    .FormTextA { width: 49%; height: 40px }
+    div span { margin-left: 20px; color: red; font-style: italic }
+
+    </style>
+
+    <div>Для внесения вашего сайта в каталог, заполните форму:</div><br><br>
+    <form name='IN' method=post action=https://fe.it-academy.by/TestForm.php novalidate>
+      <div class=Cont>
+        <label for=tx1 class=Lab>Разработчики:</label>
+          <div class=ContF id=tx1>
+            <input type=text class=FormText name='develop'>
+            <span id='devError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx2 class=Lab>Название сайта:</label>
+          <div class=ContF>
+            <input type=text id=tx2 class=FormText name='name'>
+            <span id='nameError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx3 class=Lab>URL сайта:</label>
+          <div class=ContF>
+            <input type=text id=tx3 class=FormURL name='URL'>
+            <span id='urlError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx4 class=Lab>Дата запуска сайта:</label>
+          <div class=ContF>
+            <input type=date id=tx4 class=FormNumber name='date'>
+            <span id='dateError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx5 class=Lab>Посетителей в сутки:</label>
+          <div class=ContF>
+            <input type=text id=tx5 class=FormNumber name='visit'>
+            <span id='visitError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx6 class=Lab>E-mail для связи:</label>
+          <div class=ContF>
+            <input type=text id=tx6 class=FormE name='mail'>
+            <span id='mailError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx7 class=Lab>Рубрика каталога:</label>
+          <div class=ContF>
+            <select id=tx7 class=FormE name='rubric'>
+              <option value=1>Здоровье</option>
+              <option id=a value=2>Домашний уют</option>
+              <option id=b value=3>Бытовая техника</option>
+            </select>
+            <span id='rubricError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx8 class=Lab>Размещение:</label>
+          <div class=ContF>
+            <input type=radio id=tx8 name='location' value=4>бесплатное
+            <input type=radio name='location' value=5>платное
+            <input type=radio name='location' value=6>VIP
+            <span id='locationError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx9 class=Lab>Разрешить отзывы:</label>
+          <div class=ContF>
+            <input type='checkbox' id=tx9 name='allow'>
+            <span id='allowError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+        <label for=tx10 class=Lab style='float: none'>Описание сайта:</label>
+          <div>
+            <textarea id=tx10 class=FormTextA name='description'></textarea>
+            <span id='desError'></span>
+          </div>
+      </div>
+      <div class=Cont>
+            <input type='submit' value='Опубликовать'>
+      </div>
+    </form>
+  </body>
+</html>
