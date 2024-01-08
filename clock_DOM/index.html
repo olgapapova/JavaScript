@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Clock_DOM</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <style>
+
+    .CLOCK { background-color: orange; border-radius: 50%; display: none }
+    .NUMBER { background-color: #66CDAA; position: absolute; border-radius: 50%; text-align: center }
+    .HAND { background-color: black; position: absolute; border-radius: 10px; display: none }
+    .CLOCK_N { text-align: center; padding-top: 25%; display: none }
+
+    </style>
+
+    <input id='sizeClock' type='text' name='size'>
+    <input type='submit' value='построить часы' onclick='constructClock()'>
+
+    <div id='cl' class='CLOCK'>
+       <div id='handW' class='HAND'></div>
+       <div id='handM' class='HAND'></div>
+       <div id='handS' class='HAND'></div>
+       <span id='num' class='CLOCK_N'></span>
+    </div>
+  </body>
+</html>
