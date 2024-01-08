@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>CLOCK_SVG</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body style='margin: 0'>
+    <style>
+  
+    .CLOCK { display: none }
+    .NUMBER { background-color: #66CDAA; position: absolute; border-radius: 50%; text-align: center }
+    .HAND { position: absolute; display: none }
+    .CLOCK_N { position: absolute; text-align: center }
+
+    </style>
+
+    <input id='sizeClock' type='text' name='size'>
+    <input type='submit' value='построить часы' onclick='constructClock()'>
+    <svg id='svgEl' class='CLOCK' width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <g clip-path="url(#clip0_1_28)">
+          <circle id='circle' cx="200" cy="200" r="200" fill="#FFBF5F"/>
+       </g>
+       <defs>
+          <clipPath id="clip0_1_28">
+             <rect width="400" height="400" fill="white"/>
+          </clipPath>
+       </defs>
+    </svg>
+
+    <svg id='handH' class='HAND' width="16" height="107" viewBox="0 0 16 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <circle cx="8" cy="8" r="8" fill="black"/>
+       <circle cx="8" cy="99" r="8" fill="black"/>
+       <rect y="6" width="16" height="91" fill="black"/>
+    </svg>
+
+    <svg id='handM' class='HAND' width="8" height="123" viewBox="0 0 8 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <rect y="3" width="8" height="115" fill="black"/>
+       <circle cx="4" cy="4" r="4" fill="black"/>
+       <circle cx="4" cy="119" r="4" fill="black"/>
+    </svg>
+
+    <svg id='handS' class='HAND' width="4" height="151" viewBox="0 0 4 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <rect x="1" width="2" height="150" fill="black"/>
+       <circle cx="2" cy="150" r="1" fill="black"/>
+       <circle cx="2" cy="1" r="1" fill="black"/>
+    </svg>
+  </body>
+</html>
