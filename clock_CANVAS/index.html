@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>CLOCK_CANVAS</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+    <style>
+
+    #clockCVS { display: none }
+    .CLOCK_N { position: absolute; display: none }
+
+    </style>
+
+    <input id='sizeClock' type='text' name='size'>
+    <input type='submit' value='построить часы' onclick='constructClock()'>
+
+    <canvas id='clockCVS' width='100000' height='100000'></canvas>
+    <span id='num' class='CLOCK_N'></span>
+
+  </body>
+</html>
