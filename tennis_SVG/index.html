@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>TENNIS_SVG</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+     <style>
+
+       .CONTEINER { width: 500px; margin: 0 auto 0 auto }
+       .POLE { position: relative }
+       .Schet { display: inline-block; font-size: 30px; position: absolute; top: 0px; left: 615px }
+       .BRIC { position: absolute }
+       .BALL { position: absolute }
+       #button:hover { fill: silver }
+       img:hover { fill: silver }
+
+     </style>
+     
+     <span class='Schet'><span id='leftSch'>0</span>:<span id='rightSch'>0</span></span>
+     <div class='CONTEINER'>
+      <input style='text-align: left; margin-bottom: 5px' type='submit' value='Старт!' onclick='start()'>
+
+      <svg width="500" height="300" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <rect class='POLE' id='pole' width="500" height="300" fill="#F5F5F5"/>
+         <rect x="0.5" y="0.5" width="499" height="299" fill="#FFD700" stroke="black"/>
+         <rect class='BRIC' id='bLeft' y="105" width="8" height="90" fill="#008000"/>
+         <rect class='BRIC' id='bRight' x="492" y="105" width="8" height="90" fill="#0000FF"/>
+         <circle class='BALL' id='ball' cx="250" cy="151" r="15" fill="#FF0000"/>
+      </svg>
+
+     </div>
+
+  </body>
+</html>
