@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Tennis_canvas</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+     <style>
+
+       .CONTEINER { position: relative }
+       .Tennis { margin: 0 auto 0 auto }
+       .Schet { display: inline-block; font-size: 32px; position: absolute; top: -5px; left: 615px }
+       .Pole { border: solid 1px; position: relative; background-color: #FFD700 }
+        input { margin-bottom: 10px; display: inline-block }
+       .bLeft { background-color: green; position: absolute }
+       .bRight { background-color: blue; position: absolute }
+       .BALL { background-color: red; border-radius: 50%; position: absolute }
+
+    </style>
+    
+    <div class='CONTEINER'>
+    <div id='cont' class='Tennis'>
+       <input style='text-align: left' type='submit' value='Старт!' onclick='start()'>
+       <span class='Schet'><span id='leftSch'>0</span>:<span id='rightSch'>0</span></span>
+       <canvas id='tennis' width='500' height='350'></canvas>
+    </div>
+    </div>
+
+  </body>
+</html>
