@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>clock_MVS</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+   
+     <style>
+       .CLOCK { background-color: orange; border-radius: 50%; width: 240px; height: 240px; margin: 5px; }
+       .NUMBER { background-color: #66CDAA; position: absolute; border-radius: 50%; text-align: center }
+       .HAND { background-color: black; position: absolute; border-radius: 10px; }
+       .CLOCK_N { position: absolute; text-align: center }
+       #conteyner { width: 100%; margin-top: 30px }
+       .clockCont { text-align: center; display: inline-block }
+       .svgConteyner {position: relative}
+    </style>
+
+    <div id='conteyner'>
+    <div id='NewYork' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Нью-Йорк (GMT-5)</span>
+        <div id='cl' class='CLOCK'>
+           <div id='handW' class='HAND'></div>
+           <div id='handM' class='HAND'></div>
+           <div id='handS' class='HAND'></div>
+        </div>
+    </div>
+
+    <div id='London' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Лондон (GMT)</span>
+        <div id='cl' class='CLOCK'>
+           <div id='handW' class='HAND'></div>
+           <div id='handM' class='HAND'></div>
+           <div id='handS' class='HAND'></div>
+        </div>
+    </div>
+
+    <div id='Berlin' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Берлин (GMT+1)</span>
+        <canvas id='clockCVS' width='100000' height='100000' style='display: block; margin: 5px;'></canvas>
+    </div>
+    </div>
+
+    <div id='conteyner'>
+    <div id='Minsk' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Минск (GMT+3)</span>
+        <canvas id='clockCVS' width='100000' height='100000' style='display: block; margin: 5px;'></canvas>
+    </div>
+
+    <div id='Tokyo' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Токио (GMT+9)</span>
+        <div class='svgConteyner'>
+        <svg id='svgEl' class='CLOCK' viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style='display: block; margin: 5px;'>
+           <g clip-path="url(#clip0_1_28)">
+              <circle id='circle' cx="200" cy="200" r="200" fill="orange"/>
+           </g>
+          <defs>
+              <clipPath id="clip0_1_28">
+                 <rect width="400" height="400" fill="white"/>
+              </clipPath>
+           </defs>
+        </svg>
+
+       <svg id='handH' class='HAND' width="16" height="107" viewBox="0 0 16 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <circle cx="8" cy="8" r="8" fill="black"/>
+           <circle cx="8" cy="99" r="8" fill="black"/>
+           <rect y="6" width="16" height="91" fill="black"/>
+        </svg>
+
+        <svg id='handM' class='HAND' width="8" height="123" viewBox="0 0 8 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect y="3" width="8" height="115" fill="black"/>
+           <circle cx="4" cy="4" r="4" fill="black"/>
+           <circle cx="4" cy="119" r="4" fill="black"/>
+        </svg>
+
+        <svg id='handS' class='HAND' width="4" height="151" viewBox="0 0 4 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect x="1" width="2" height="150" fill="black"/>
+           <circle cx="2" cy="150" r="1" fill="black"/>
+           <circle cx="2" cy="1" r="1" fill="black"/>
+        </svg>
+        </div>     
+    </div>
+
+    <div id='Vladivostok' class='clockCont'>
+        <input id='sP' class='stopCL' type='submit' value='стоп'>
+        <input id='sT' class='startCL' type='submit' value='старт'>
+        <span>Владивосток (GMT+10)</span>
+        <div class='svgConteyner'>
+        <svg id='svgEl' class='CLOCK' viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style='display: block; margin: 5px;'>
+           <g clip-path="url(#clip0_1_28)">
+              <circle id='circle' cx="200" cy="200" r="200" fill="orange"/>
+           </g>
+          <defs>
+              <clipPath id="clip0_1_28">
+                 <rect width="400" height="400" fill="white"/>
+              </clipPath>
+           </defs>
+        </svg>
+
+       <svg id='handH' class='HAND' width="16" height="107" viewBox="0 0 16 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <circle cx="8" cy="8" r="8" fill="black"/>
+           <circle cx="8" cy="99" r="8" fill="black"/>
+           <rect y="6" width="16" height="91" fill="black"/>
+        </svg>
+
+        <svg id='handM' class='HAND' width="8" height="123" viewBox="0 0 8 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect y="3" width="8" height="115" fill="black"/>
+           <circle cx="4" cy="4" r="4" fill="black"/>
+           <circle cx="4" cy="119" r="4" fill="black"/>
+        </svg>
+
+        <svg id='handS' class='HAND' width="4" height="151" viewBox="0 0 4 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect x="1" width="2" height="150" fill="black"/>
+           <circle cx="2" cy="150" r="1" fill="black"/>
+           <circle cx="2" cy="1" r="1" fill="black"/>
+        </svg>
+        </div>
+      
+    </div>
+    </div>
+
+  </body>
+</html>
